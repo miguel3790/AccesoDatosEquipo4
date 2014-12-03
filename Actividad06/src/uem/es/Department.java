@@ -1,79 +1,75 @@
-package uem.es;
+package accesoDatosGrupal;
+import java.io.Serializable;
 
-
-public class Department implements java.io.Serializable {
-
-	/**
-	 * @author Guillermo Valenzuela
-	 */
-
-	private static final long serialVersionUID = 772598062944144462L;
-
-	private String name;
+//clase departmaneto 
+/**
+ * @author David y Miguel
+ */
+public class Deparment implements Serializable {
+	
 	private int id;
-	private int head;
+	private String name;
+	private String head;
+	
+	private static final long serialVersionUID = 1L;
 
-	/**
-	 * constructor vacio
-	 */
-	public Department() {
+	public Deparment() {
 
 	}
-
-	/**
-	 * 
-	 * @param name
-	 * @param id
-	 * @param head
-	 */
-	public Department(String name, int id, int head) {
-		this.name = name;
+	
+	public Deparment(int id, String name, String head){
 		this.id = id;
+		this.name = name;
 		this.head = head;
 	}
-
-	public String getName() {
-		return name;
-	}
-
-	public int getId() {
+	/**
+	 * returns the id of the deparment
+	 * @return int
+	 */
+	public int getId(){
 		return id;
 	}
-
-	public int getHead() {
+	/**
+	 * Returns a new name for the deparment
+	 * @return String
+	 */
+	public String getName(){
+		return name;
+	}
+	/**
+	 * Returns the head of deparment
+	 * @return String
+	 */
+	public String getHead(){
 		return head;
 	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public void setId(int id) {
+	/**
+	 * Sets a new id por the deparment
+	 * @param id
+	 */
+	public void SetId(int id){
 		this.id = id;
 	}
-
-	public void setHead(int head) {
+	/**
+	 * Sets a new name for the deparment
+	 * @param name
+	 */
+	public void setName(String name){
+		this.name = name;
+	}
+	
+	public void SetHead(String head){
 		this.head = head;
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		return super.equals(obj);
+	}
 
-	/**
-	 * devuelve el name, id y head
-	 */
 	@Override
 	public String toString() {
-		return this.name + "\t" + this.id + "\t" + this.head;
+		return super.toString();
 	}
 
-	/**
-	 * metodo que compara el objeto departamento
-	 */
-	@Override
-	public boolean equals(Object otherDepartament) {
-		Department dep = (Department) otherDepartament;
-		if ((this.id == dep.id) && (this.head == dep.head)
-				&& (this.name == dep.name)) {
-			return true;
-		} else
-			return false;
-	}
 }
