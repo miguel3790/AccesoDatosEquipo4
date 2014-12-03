@@ -49,7 +49,7 @@ public class Department implements java.io.Serializable {
 	}
 
 	public void setId(int id) {
-		this.id = id;
+		this.id = id;eee
 	}
 
 	public void setHead(int head) {
